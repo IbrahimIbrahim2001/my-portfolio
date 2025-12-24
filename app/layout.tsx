@@ -1,14 +1,19 @@
+import { Header } from "@/components/header";
+import { ThemeProvider } from "@/components/theme-provider";
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Merriweather, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
+import { StripedPattern } from "@/components/magicui/striped-pattern";
+import { Footer } from "@/components/footer";
+import { AnimatedLayout } from "@/components/animated-layout";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const merriweather = Merriweather({
+  variable: "--font-merriweather",
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const jetBrains_Mono = JetBrains_Mono({
+  variable: "--font-jetbrains_mono",
   subsets: ["latin"],
 });
 
@@ -23,11 +28,27 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning className='scroll-smooth hide-scrollbar '>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={` ${merriweather.variable} ${jetBrains_Mono.variable} antialiased`}
       >
-        {children}
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <div className="relative  min-h-screen px-4 md:px-8 w-full md:max-w-4xl mx-auto">
+            <StripedPattern className="opacity-20 z-0" />
+            <div className="relative bg-background min-h-screen z-10 border border-y-0 border-border/50">
+              <Header />
+              <AnimatedLayout>
+                {children}
+              </AnimatedLayout>
+            </div>
+          </div>
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );
