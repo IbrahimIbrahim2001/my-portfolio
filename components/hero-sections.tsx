@@ -1,10 +1,11 @@
-import { Button, buttonVariants } from "@/components/ui/button";
+import { buttonVariants } from "@/components/ui/button";
 import { LayoutTextFlip } from "@/components/ui/layout-text-flip";
-import { Mail } from "lucide-react";
-import { SiGithub, SiLinkedin } from "react-icons/si";
-import TextAnimate from "./ui/text-animate";
-import Link from "next/link";
 import { cn } from "@/lib/utils";
+import { Mail } from "lucide-react";
+import Link from "next/link";
+import { SiGithub, SiLinkedin } from "react-icons/si";
+import { AnimatedButton } from "./shared/animated-button";
+import TextAnimate from "./ui/text-animate";
 
 const GITHUB_ACCOUNT_LINK = process.env.NEXT_PUBLIC_GITHUB_ACCOUNT_LINK!
 const LINKEDIN_ACCOUNT_LINK = process.env.NEXT_PUBLIC_LINKEDIN_ACCOUNT_LINK!
@@ -19,7 +20,7 @@ export function HeroSection() {
                 <div className="mt-2 inline-flex items-center gap-2 text-lg text-muted-foreground">
                     <LayoutTextFlip
                         text=""
-                        words={["Software Engineer", "Web Developer", "Frontend Developer"]}
+                        words={["Software Engineer", "Web Developer", "Front-end Developer", "Full-stack developer"]}
                     />
                 </div>
             </div>
@@ -28,10 +29,10 @@ export function HeroSection() {
             </div>
             {/* Contact buttons */}
             <div className="flex sm:flex-wrap gap-3 mt-6  lg:justify-start">
-                <Button size="sm" className="gap-2 hover:border dark:hover:border-input hover:border-border hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50 transition-all delay-75">
+                <AnimatedButton>
                     <Mail className="h-4 w-4" />
                     Email Me
-                </Button>
+                </AnimatedButton>
                 <Link target="_blank" href={LINKEDIN_ACCOUNT_LINK} className={cn("gap-2", buttonVariants({ variant: "outline", size: "sm" }))}>
                     <SiLinkedin className="size-4" />
                     LinkedIn

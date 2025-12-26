@@ -47,5 +47,18 @@ export const projects: Project[] = [
         ],
         lightImage: nexTapLightScreen,
         darkImage: nexTapDarkScreen
-    }
+    },
+    {
+        title: "Vibify",
+        demo_href: "https://vibify-chi.vercel.app/",
+        github_href: "https://github.com/IbrahimIbrahim2001/cloned-apps/tree/main/Vibify",
+        description: "A feature-rich music streaming service with AI-powered recommendations, playlist creation, and social sharing",
+        techIcons: [
+            { icon: ViteLogo, text: "Vite", color: "text-[#646cff]" },
+            { icon: SiReact, text: "React", color: "text-[#58c4dc]" },
+            { icon: RiSupabaseFill, text: "Supabase", color: "text-[#006239]" },
+        ],
+        lightImage: nexTapLightScreen,
+        darkImage: nexTapDarkScreen
+    },
 ]
