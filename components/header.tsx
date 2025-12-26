@@ -1,11 +1,12 @@
 "use client";
 import { MobileNav } from "@/components/mobile-nav";
-import { Button, buttonVariants } from "@/components/ui/button";
+import { buttonVariants } from "@/components/ui/button";
 import { useScroll } from "@/hooks/use-scroll";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
-import { AnimatedThemeToggler } from "./ui/animated-theme-toggler";
 import { usePathname } from "next/navigation";
+import { AnimatedButton } from "./shared/animated-button";
+import { AnimatedThemeToggler } from "./ui/animated-theme-toggler";
 
 
 export const navLinks = [
@@ -64,7 +65,9 @@ export function Header() {
                             </Link>
                         )
                     })}
-                    <Button className="hover:border dark:hover:border-input hover:border-border hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50 transition-all delay-75">Download Resume</Button>
+                    <AnimatedButton>
+                        Download Resume
+                    </AnimatedButton>
                 </div>
                 <MobileNav />
             </nav>
