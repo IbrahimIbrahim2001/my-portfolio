@@ -1,12 +1,17 @@
 import { AllProjectsSection } from "@/components/all-projects-section";
+import SectionHeader from "@/components/section-header";
 export default function ProjectsPage() {
     return (
-        <div className="mb-12">
-            <div className="py-8 md:py-10 px-6 md:px-8">
-                <div className="text-3xl flex items-center gap-2 mb-4">
-                    <div className="h-2 w-8 bg-primary rounded-full" />
-                    <h2 className="leading-none font-semibold">Projects</h2>
-                </div>
+        <div className="pb-16">
+            <div className="py-8 md:py-10 px-6 md:px-8 max-w-3xl">
+                <SectionHeader
+                    title="Projects"
+                    description={
+                        <>A collection of projects built with <span className="font-semibold text-primary/80">Next.js, TypeScript, and Tailwind CSS</span>.
+                            Each represents a practical problem I&apos;ve solved or a technology I wanted to explore in depth.
+                        </>
+                    }
+                />
             </div>
             <AllProjectsSection />
         </div>

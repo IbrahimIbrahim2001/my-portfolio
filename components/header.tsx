@@ -7,6 +7,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { AnimatedButton } from "./shared/animated-button";
 import { AnimatedThemeToggler } from "./ui/animated-theme-toggler";
+import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
 
 
 export const navLinks = [
@@ -45,9 +46,14 @@ export function Header() {
                     }
                 )}
             >
-                <Link className="rounded-md p-2 hover:bg-accent" href="/">
-                    {/* <Logo className="h-4.5" /> */}
-                    Ibrahim
+                <Link className="rounded-md" href="/">
+                    <Avatar className="size-10">
+                        <AvatarImage src="" alt="my image" />
+                        <AvatarFallback>
+                            II
+                            <span className="sr-only">Ibrahim Ibrahim</span>
+                        </AvatarFallback>
+                    </Avatar>
                 </Link>
                 <div className="hidden items-center gap-1 md:flex">
                     <AnimatedThemeToggler />

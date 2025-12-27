@@ -85,7 +85,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
                 <CardTitle className="text-xl font-bold transition-all duration-300 group-hover:text-primary group-hover:translate-x-1">
                     {project.title}
                 </CardTitle>
-                <CardDescription className="h-20 transition-all duration-300  group-hover:text-foreground/80">
+                <CardDescription className="h-20 line-clamp-3 transition-all duration-300  group-hover:text-foreground/80">
                     {project.description}
                 </CardDescription>
             </CardHeader>

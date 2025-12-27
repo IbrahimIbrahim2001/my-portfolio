@@ -5,7 +5,6 @@ import { Mail } from "lucide-react";
 import Link from "next/link";
 import { SiGithub, SiLinkedin } from "react-icons/si";
 import { AnimatedButton } from "./shared/animated-button";
-import TextAnimate from "./ui/text-animate";
 
 const GITHUB_ACCOUNT_LINK = process.env.NEXT_PUBLIC_GITHUB_ACCOUNT_LINK!
 const LINKEDIN_ACCOUNT_LINK = process.env.NEXT_PUBLIC_LINKEDIN_ACCOUNT_LINK!
@@ -20,11 +19,11 @@ export function HeroSection() {
                 <div className="mt-2 inline-flex items-center gap-2 text-lg text-muted-foreground">
                     <LayoutTextFlip
                         text=""
-                        words={["Software Engineer", "Web Developer", "Front-end Developer", "Full-stack developer"]}
+                        words={["Software Engineer", "Front-end Developer", "React & Next Specialist"]}
                     />
                 </div>
             </div>
-            <TextAnimate type="whipIn" text="Building exceptional digital experiences with modern web technologies." className="max-w-sm text-md text-muted-foreground/60 font-semibold mt-4" />
+            <p className="max-w-sm text-md text-muted-foreground/60 font-semibold mt-4">Building modern user interfaces with Next.js, TypeScript, and Shadcn UI.</p>
             <div>
             </div>
             {/* Contact buttons */}

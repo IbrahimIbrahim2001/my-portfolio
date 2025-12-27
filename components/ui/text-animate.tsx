@@ -237,7 +237,8 @@ const TextAnimate: FC<Props> = ({
               aria-hidden="true"
               key={index}
               initial="hidden"
-              animate="visible"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.2 }}
               variants={container}
               transition={{
                 delayChildren: index * 0.13,
@@ -271,7 +272,7 @@ const TextAnimate: FC<Props> = ({
       role="heading"
       variants={container}
       initial="hidden"
-      animate="visible"
+      whileInView="visible"
       className={className}
       {...props}
     >

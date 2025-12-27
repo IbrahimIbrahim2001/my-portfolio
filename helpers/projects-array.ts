@@ -4,7 +4,7 @@ import nexTapDarkScreen from "@/public/projects/nexTap-screen-dark.png";
 import nexTapLightScreen from "@/public/projects/nexTap-screen-light.png";
 import { Project } from "@/types/project-type";
 import { RiSupabaseFill } from "react-icons/ri";
-import { SiDrizzle, SiHono, SiNextdotjs, SiReact, SiShadcnui } from "react-icons/si";
+import { SiClerk, SiDrizzle, SiHono, SiNextdotjs, SiPrisma, SiReact, SiShadcnui } from "react-icons/si";
 
 
 export const projects: Project[] = [
@@ -49,14 +49,15 @@ export const projects: Project[] = [
         darkImage: nexTapDarkScreen
     },
     {
-        title: "Vibify",
-        demo_href: "https://vibify-chi.vercel.app/",
-        github_href: "https://github.com/IbrahimIbrahim2001/cloned-apps/tree/main/Vibify",
-        description: "A feature-rich music streaming service with AI-powered recommendations, playlist creation, and social sharing",
+        title: "crypto-currency-project",
+        demo_href: "https://crypto-currency-project-pi.vercel.app/",
+        github_href: "https://github.com/IbrahimIbrahim2001/crypto-currency-project",
+
+        "description": "Cryptocurrency tracker with real-time price data and currency conversion. news bookmarking, search functionality, and user authentication.",
         techIcons: [
-            { icon: ViteLogo, text: "Vite", color: "text-[#646cff]" },
-            { icon: SiReact, text: "React", color: "text-[#58c4dc]" },
-            { icon: RiSupabaseFill, text: "Supabase", color: "text-[#006239]" },
+            { icon: SiNextdotjs, text: "Next.js", color: "text-foreground" },
+            { icon: SiClerk, text: "Clerk", color: "text-foreground" },
+            { icon: SiPrisma, text: "Prisma ORM", color: "text-foreground" },
         ],
         lightImage: nexTapLightScreen,
         darkImage: nexTapDarkScreen
