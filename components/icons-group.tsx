@@ -21,6 +21,7 @@ export const IconGroup = ({ icons: Icons }: IconGroupProps) => {
                         className={cn("relative flex items-center overflow-hidden border border-border/80 bg-background/80 rounded p-1", item.color)}
                         onHoverStart={() => setHoveredIndex(index)}
                         onHoverEnd={() => setHoveredIndex(null)}
+                        onTap={() => setHoveredIndex(() => hoveredIndex === index ? null : index)}
                         initial={false}
                         animate={{
                             width: hoveredIndex === index ? 120 : 40,

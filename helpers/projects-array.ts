@@ -6,12 +6,13 @@ import { Project } from "@/types/project-type";
 import { RiSupabaseFill } from "react-icons/ri";
 import { SiClerk, SiDrizzle, SiHono, SiNextdotjs, SiPrisma, SiReact, SiShadcnui } from "react-icons/si";
 
+const GITHUB_ACCOUNT_LINK = process.env.NEXT_PUBLIC_GITHUB_ACCOUNT_LINK!
 
 export const projects: Project[] = [
     {
         title: "NexTap",
         demo_href: "https://nex-tap-ten.vercel.app",
-        github_href: "https://github.com/IbrahimIbrahim2001/NexTap",
+        github_href: `${GITHUB_ACCOUNT_LINK}/NexTap`,
         description: "A collaborative rich-text editor, team workspaces, and email-based member invitations",
         techIcons: [
             { icon: SiNextdotjs, text: "Next.js", color: "text-foreground" },
@@ -24,7 +25,7 @@ export const projects: Project[] = [
     {
         title: "Pulse",
         demo_href: "",
-        github_href: "https://github.com/IbrahimIbrahim2001/pulse",
+        github_href: `${GITHUB_ACCOUNT_LINK}/pulse`,
         disabled_demo_href: true,
         description: "A full-featured social messaging platform with group chats, multimedia stories, and real-time communication",
         techIcons: [
@@ -38,7 +39,7 @@ export const projects: Project[] = [
     {
         title: "Vibify",
         demo_href: "https://vibify-chi.vercel.app/",
-        github_href: "https://github.com/IbrahimIbrahim2001/cloned-apps/tree/main/Vibify",
+        github_href: `${GITHUB_ACCOUNT_LINK}/cloned-apps/tree/main/Vibify`,
         description: "A feature-rich music streaming service with AI-powered recommendations, playlist creation, and social sharing",
         techIcons: [
             { icon: ViteLogo, text: "Vite", color: "text-[#646cff]" },

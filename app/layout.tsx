@@ -6,6 +6,7 @@ import "./globals.css";
 import { StripedPattern } from "@/components/magicui/striped-pattern";
 import { Footer } from "@/components/footer";
 import { AnimatedLayout } from "@/components/animated-layout";
+import { Toaster } from "sonner";
 
 const merriweather = Merriweather({
   variable: "--font-merriweather",
@@ -48,6 +49,7 @@ export default function RootLayout({
             </div>
           </div>
           <Footer />
+          <Toaster />
         </ThemeProvider>
       </body>
     </html>
