@@ -1,6 +1,5 @@
 "use client";
 import { MobileNav } from "@/components/mobile-nav";
-import { buttonVariants } from "@/components/ui/button";
 import { useScroll } from "@/hooks/use-scroll";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
@@ -8,8 +7,8 @@ import { usePathname } from "next/navigation";
 import { AnimatedButton } from "./shared/animated-button";
 import { AnimatedThemeToggler } from "./ui/animated-theme-toggler";
 import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
-
-
+import MyImage from "@/public/personal/my-image.jpeg"
+import Image from "next/image";
 export const navLinks = [
     {
         label: "About",
@@ -21,7 +20,7 @@ export const navLinks = [
     },
     {
         label: "Contact",
-        href: "#",
+        href: "/contact",
     },
 ];
 
@@ -48,7 +47,7 @@ export function Header() {
             >
                 <Link className="rounded-md" href="/">
                     <Avatar className="size-10">
-                        <AvatarImage src="" alt="my image" />
+                        <AvatarImage src={MyImage.src} alt="my image" />
                         <AvatarFallback>
                             II
                             <span className="sr-only">Ibrahim Ibrahim</span>
@@ -60,23 +59,29 @@ export function Header() {
                     {navLinks.map((link, i) => {
                         const isActive = pathname.includes(link.href);
                         return (
-                            <Link
-                                className={cn(buttonVariants({ variant: "ghost" }),
-                                    isActive && "text-primary font-semibold"
-                                )}
-                                href={link.href}
-                                key={i}
-                            >
-                                {link.label}
-                            </Link>
+                            <div key={i} >
+                                <AnimatedButton variant="ghost">
+                                    <Link
+                                        prefetch
+                                        className={cn(
+                                            isActive && "text-primary font-semibold",
+                                        )}
+                                        href={link.href}
+                                    >
+                                        {link.label}
+                                    </Link>
+                                </AnimatedButton>
+                            </div>
                         )
                     })}
                     <AnimatedButton>
-                        Download Resume
+                        <span>
+                            Download Resume
+                        </span>
                     </AnimatedButton>
                 </div>
                 <MobileNav />
             </nav>
-        </header>
+        </header >
     );
 }

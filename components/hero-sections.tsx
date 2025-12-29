@@ -1,6 +1,4 @@
-import { buttonVariants } from "@/components/ui/button";
 import { LayoutTextFlip } from "@/components/ui/layout-text-flip";
-import { cn } from "@/lib/utils";
 import { Mail } from "lucide-react";
 import Link from "next/link";
 import { SiGithub, SiLinkedin } from "react-icons/si";
@@ -8,6 +6,7 @@ import { AnimatedButton } from "./shared/animated-button";
 
 const GITHUB_ACCOUNT_LINK = process.env.NEXT_PUBLIC_GITHUB_ACCOUNT_LINK!
 const LINKEDIN_ACCOUNT_LINK = process.env.NEXT_PUBLIC_LINKEDIN_ACCOUNT_LINK!
+const MY_EMAIL = process.env.NEXT_PUBLIC_PERSONAL_EMAIL!;
 
 export function HeroSection() {
     return (
@@ -23,23 +22,30 @@ export function HeroSection() {
                     />
                 </div>
             </div>
-            <p className="max-w-sm text-md text-muted-foreground/60 font-semibold mt-4">Building modern user interfaces with Next.js, TypeScript, and Shadcn UI.</p>
+            <p className="max-w-2xl text-lg leading-relaxed text-muted-foreground/60 mt-4">I build fast, accessible web applications that deliver exceptional user experiences with  <strong className="text-primary/80">React</strong> and modern tooling.</p>
             <div>
             </div>
             {/* Contact buttons */}
             <div className="flex sm:flex-wrap gap-3 mt-6  lg:justify-start">
                 <AnimatedButton>
-                    <Mail className="h-4 w-4" />
-                    Email Me
+                    <Link
+                        href={`mailto:${MY_EMAIL}?subject=Portfolio Inquiry`} className="flex items-center gap-x-1">
+                        <Mail className="h-4 w-4" />
+                        Email Me
+                    </Link>
                 </AnimatedButton>
-                <Link target="_blank" href={LINKEDIN_ACCOUNT_LINK} className={cn("gap-2", buttonVariants({ variant: "outline", size: "sm" }))}>
-                    <SiLinkedin className="size-4" />
-                    LinkedIn
-                </Link>
-                <Link target="_blank" href={GITHUB_ACCOUNT_LINK} className={cn("gap-2", buttonVariants({ variant: "outline", size: "sm" }))}>
-                    <SiGithub className="size-4" />
-                    GitHub
-                </Link>
+                <AnimatedButton variant={"outline"}>
+                    <Link href={LINKEDIN_ACCOUNT_LINK} target="_blank" className="flex items-center gap-x-1">
+                        <SiLinkedin className="size-4" />
+                        LinkedIn
+                    </Link>
+                </AnimatedButton>
+                <AnimatedButton variant={"outline"}>
+                    <Link href={GITHUB_ACCOUNT_LINK} target="_blank" className="flex items-center gap-x-1">
+                        <SiGithub className="size-4" />
+                        GitHub
+                    </Link>
+                </AnimatedButton>
             </div>
         </div>
     )

@@ -1,10 +1,10 @@
-import { useMediaQuery } from "@/hooks/use-media-query";
+import { navLinks } from "@/components/header";
 import { Button, buttonVariants } from "@/components/ui/button";
+import { useMediaQuery } from "@/hooks/use-media-query";
 import { cn } from "@/lib/utils";
 import { MenuIcon, XIcon } from "lucide-react";
 import React from "react";
 import { createPortal } from "react-dom";
-import { navLinks } from "@/components/header";
 
 export function MobileNav() {
 	const [open, setOpen] = React.useState(false);
@@ -69,12 +69,6 @@ export function MobileNav() {
 										{link.label}
 									</a>
 								))}
-							</div>
-							<div className="mt-12 flex flex-col gap-2">
-								<Button className="w-full" variant="outline">
-									Sign In
-								</Button>
-								<Button className="w-full">Get Started</Button>
 							</div>
 						</div>
 					</div>,

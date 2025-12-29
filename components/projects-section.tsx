@@ -46,7 +46,7 @@ export function ProjectsSection() {
         </motion.div>
         <div className="flex justify-center items-center">
           <AnimatedButton>
-            <Link prefetch href="/projects" >
+            <Link prefetch href="/projects">
               View More
             </Link>
           </AnimatedButton>

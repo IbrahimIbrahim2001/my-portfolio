@@ -3,7 +3,7 @@ import SectionHeader from "./section-header"
 export function AboutSection() {
     return (
         <>
-            <div className="relative mb-12">
+            <div className="relative">
                 <div className="py-8 md:py-10 px-6 md:px-8 max-w-3xl">
                     <SectionHeader title="About Me" description={
                         <>
