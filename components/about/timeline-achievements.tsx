@@ -1,7 +1,7 @@
 import { timeline } from "@/helpers/timeline-array";
-import { TextBox } from "./text-box";
+import WrapperContainer from "../shared/wrapper";
+import { TextBox } from "../shared/text-box";
 import TimelineItem from "./timeline-item";
-import WrapperContainer from "./wrapper";
 
 export function TimelineAchievements() {
   return (

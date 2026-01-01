@@ -1,6 +1,6 @@
 "use client";
 import { AiOutlineCheckCircle } from "react-icons/ai";
-import { Badge } from "./ui/badge";
+import { Badge } from "../ui/badge";
 import { Timeline } from "@/types/timeline-type";
 import { motion } from "motion/react";
 import { badgeVariants, containerVariants, iconVariants, itemVariants } from "@/animations/timeline-variants";

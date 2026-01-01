@@ -3,6 +3,7 @@ import { Mail } from "lucide-react";
 import Link from "next/link";
 import { SiGithub, SiLinkedin } from "react-icons/si";
 import { AnimatedButton } from "./shared/animated-button";
+import { Tooltip, TooltipContent, TooltipTrigger } from "./ui/tooltip";
 
 const GITHUB_ACCOUNT_LINK = process.env.NEXT_PUBLIC_GITHUB_ACCOUNT_LINK!
 const LINKEDIN_ACCOUNT_LINK = process.env.NEXT_PUBLIC_LINKEDIN_ACCOUNT_LINK!
@@ -27,13 +28,22 @@ export function HeroSection() {
             </div>
             {/* Contact buttons */}
             <div className="flex sm:flex-wrap gap-3 mt-6  lg:justify-start">
-                <AnimatedButton>
-                    <Link
-                        href={`mailto:${MY_EMAIL}?subject=Portfolio Inquiry`} className="flex items-center gap-x-1">
-                        <Mail className="h-4 w-4" />
-                        Email Me
-                    </Link>
-                </AnimatedButton>
+                <Tooltip>
+                    <AnimatedButton>
+                        <div>
+                            <TooltipTrigger asChild>
+                                <Link
+                                    href={`mailto:${MY_EMAIL}?subject=Portfolio Inquiry`} className="flex items-center gap-x-1">
+                                    <Mail className="h-4 w-4" />
+                                    Contact Me
+                                </Link>
+                            </TooltipTrigger>
+                            <TooltipContent>
+                                Opens email to: {MY_EMAIL}
+                            </TooltipContent>
+                        </div>
+                    </AnimatedButton>
+                </Tooltip>
                 <AnimatedButton variant={"outline"}>
                     <Link href={LINKEDIN_ACCOUNT_LINK} target="_blank" className="flex items-center gap-x-1">
                         <SiLinkedin className="size-4" />

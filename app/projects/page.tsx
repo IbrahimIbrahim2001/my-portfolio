@@ -1,5 +1,13 @@
-import { AllProjectsSection } from "@/components/all-projects-section";
-import SectionHeader from "@/components/section-header";
+import { AllProjectsSection } from "@/components/project/all-projects-section";
+import SectionHeader from "@/components/shared/section-header";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: 'Projects',
+    description: 'Explore my portfolio of web development projects built with React, Next.js, and modern frontend technologies.',
+}
+
+
 export default function ProjectsPage() {
     return (
         <div className="pb-16">

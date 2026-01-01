@@ -8,7 +8,6 @@ import { AnimatedButton } from "./shared/animated-button";
 import { AnimatedThemeToggler } from "./ui/animated-theme-toggler";
 import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
 import MyImage from "@/public/personal/my-image.jpeg"
-import Image from "next/image";
 export const navLinks = [
     {
         label: "About",

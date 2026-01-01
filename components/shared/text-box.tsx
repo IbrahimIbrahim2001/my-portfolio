@@ -1,4 +1,4 @@
-import TextAnimate from "./ui/text-animate"
+import TextAnimate from "../ui/text-animate"
 
 interface TextBoxProps {
     text: string

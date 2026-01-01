@@ -1,16 +1,16 @@
 "use client";
 
-import WrapperContainer from "@/components/wrapper";
-import { ProjectCard } from "./project-card";
+import WrapperContainer from "@/components/shared/wrapper";
 import { projects } from "@/helpers/projects-array";
 import { motion } from "motion/react";
+import { ProjectCard } from "./project-card";
 
 export function AllProjectsSection() {
     return (
         <div className="relative">
             <WrapperContainer>
                 <motion.div
-                    className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 mb-4">
+                    className="grid sm:grid-cols-2 gap-4 mb-4">
                     {projects.map((project, index) => (
                         <motion.div key={project.title}
                             initial={{ opacity: 0, y: 20 }}

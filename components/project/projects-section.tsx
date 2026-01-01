@@ -1,10 +1,10 @@
 "use client";
-import WrapperContainer from "@/components/wrapper";
+import WrapperContainer from "@/components/shared/wrapper";
 import { projects } from "@/helpers/projects-array";
 import Link from "next/link";
 import { ProjectCard } from "./project-card";
-import { AnimatedButton } from "./shared/animated-button";
-import { TextBox } from "./text-box";
+import { AnimatedButton } from "../shared/animated-button";
+import { TextBox } from "../shared/text-box";
 import { motion } from "motion/react";
 
 const containerVariants = {
@@ -29,12 +29,12 @@ const itemVariants = {
 };
 
 export function ProjectsSection() {
-  const subProjects = projects.slice(0, 3); // get only the first 3 projects
+  const subProjects = projects.slice(0, 2); // get only the first 2 projects
   return (
     <div className="relative">
       <WrapperContainer>
         <TextBox text="I love building things " />
-        <motion.div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 mb-4"
+        <motion.div className="grid sm:grid-cols-2 gap-4 mb-4"
           variants={containerVariants}
           initial="hidden"
           animate="visible">

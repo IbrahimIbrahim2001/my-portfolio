@@ -18,19 +18,20 @@ interface ProjectCardProps {
 
 export function ProjectCard({ project }: ProjectCardProps) {
     return (
-        <Card className="p-0 group cursor-pointer relative overflow-hidden transition-all duration-500 hover:shadow-2xl hover:-translate-y-2">
-            <CardContent className="p-0 relative w-full h-48 overflow-hidden">
+        <Card className="p-0 w-full group cursor-pointer overflow-hidden transition-all duration-500 hover:shadow-2xl hover:-translate-y-2">
+            <CardContent className="p-0 relative w-full aspect-video">
                 <div className="absolute inset-0 bg-linear-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10" />
                 <Image
                     src={project.lightImage}
                     alt="NexTap project-light screen"
-                    className="transition-all duration-700 group-hover:scale-110 group-hover:rotate-1 dark:hidden"
+                    className="transition-all duration-500 group-hover:scale-105 dark:hidden object-fill"
                     fill
                 />
+
                 <Image
                     src={project.darkImage}
-                    alt="NexTap project-light screen"
-                    className="transition-all duration-700 group-hover:scale-110 group-hover:rotate-1 hidden dark:block"
+                    alt="NexTap project-dark screen"
+                    className="transition-all duration-500 group-hover:scale-105 hidden dark:block object-fill"
                     fill
                 />
                 {/* view code & view demo icons section*/}

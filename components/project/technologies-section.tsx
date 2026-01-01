@@ -1,5 +1,5 @@
 import { Marquee } from "@/components/ui/marquee"
-import { TextBox } from "./text-box"
+import { TextBox } from "../shared/text-box"
 import { TechnologyType } from "@/types/technology-type";
 import { technologies } from "@/helpers/technologies-array";
 
