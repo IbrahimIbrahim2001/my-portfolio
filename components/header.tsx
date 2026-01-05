@@ -7,7 +7,8 @@ import { usePathname } from "next/navigation";
 import { AnimatedButton } from "./shared/animated-button";
 import { AnimatedThemeToggler } from "./ui/animated-theme-toggler";
 import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
-import MyImage from "@/public/personal/my-image.jpeg"
+import MyImage from "@/public/personal/my-image.jpeg";
+
 export const navLinks = [
     {
         label: "About",
@@ -73,11 +74,13 @@ export function Header() {
                             </div>
                         )
                     })}
-                    <AnimatedButton>
-                        <span>
-                            Download Resume
-                        </span>
-                    </AnimatedButton>
+                    <Link href="/personal/Ibrahim_Ibrahim.pdf" download="Ibrahim_Ibrahim.pdf" passHref>
+                        <AnimatedButton>
+                            <span>
+                                Download Resume
+                            </span>
+                        </AnimatedButton>
+                    </Link>
                 </div>
                 <MobileNav />
             </nav>
