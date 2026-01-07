@@ -3,8 +3,11 @@ import { Button, buttonVariants } from "@/components/ui/button";
 import { useMediaQuery } from "@/hooks/use-media-query";
 import { cn } from "@/lib/utils";
 import { MenuIcon, XIcon } from "lucide-react";
+import Link from "next/link";
 import React from "react";
 import { createPortal } from "react-dom";
+import { AnimatedButton } from "./shared/animated-button";
+import { AnimatedThemeToggler } from "./ui/animated-theme-toggler";
 
 export function MobileNav() {
 	const [open, setOpen] = React.useState(false);
@@ -69,6 +72,20 @@ export function MobileNav() {
 										{link.label}
 									</a>
 								))}
+							</div>
+							<div className="w-full flex items-center justify-center gap-x-4 mb-4">
+								<div>
+									<AnimatedThemeToggler className="w-full h-9 px-4 py-2 border bg-background shadow-xs hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50" />
+								</div>
+								<div>
+									<Link href="/personal/Ibrahim_Ibrahim.pdf" download="Ibrahim_Ibrahim.pdf" passHref>
+										<AnimatedButton>
+											<span>
+												Download Resume
+											</span>
+										</AnimatedButton>
+									</Link>
+								</div>
 							</div>
 						</div>
 					</div>,
