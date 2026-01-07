@@ -27,7 +27,7 @@ export function HeroSection() {
             <div>
             </div>
             {/* Contact buttons */}
-            <div className="flex sm:flex-wrap gap-3 mt-6  lg:justify-start">
+            <div className="flex sm:flex-wrap mt-6 justify-center sm:justify-start gap-2 md:gap-3 px-6 sm:px-0">
                 <Tooltip>
                     <AnimatedButton>
                         <div>
